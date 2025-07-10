@@ -9,5 +9,6 @@ public class Funcionario {
 	private int idFuncionario;
 	private Usuario usuario;
 	private String codigoFuncionario;
+	private Cargo cargo;
 	private int idSupervisor;
 }
