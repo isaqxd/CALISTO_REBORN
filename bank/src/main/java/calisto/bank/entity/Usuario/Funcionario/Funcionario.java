@@ -1,5 +1,6 @@
-package calisto.bank.entity.Usuario;
+package calisto.bank.entity.Usuario.Funcionario;
 
+import calisto.bank.entity.Usuario.Usuario;
 import lombok.Getter;
 import lombok.Setter;
 

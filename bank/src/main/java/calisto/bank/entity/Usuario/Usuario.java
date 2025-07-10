@@ -9,13 +9,13 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Usuario {
-	public int idUsuario;
-	public String nome;
-	public String cpf;
-	public LocalDateTime dataNascimento;
-	public String telefone;
-	public TIpoUsuario TipoUsuario;
-	public String senhaHash;
-	public String otpAtivo;
-	public LocalDate otpExpiracao;
+	private int idUsuario;
+	private String nome;
+	private String cpf;
+	private LocalDateTime dataNascimento;
+	private String telefone;
+	private TIpoUsuario TipoUsuario;
+	private String senhaHash;
+	private String otpAtivo;
+	private LocalDate otpExpiracao;
 }
