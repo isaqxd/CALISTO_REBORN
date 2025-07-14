@@ -15,6 +15,8 @@ public class Investimento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idContaInvestimento;
+    @OneToOne
+    @JoinColumn(name = "id_conta")
     private Conta conta;
 
     @Enumerated(EnumType.STRING)

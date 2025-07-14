@@ -16,8 +16,14 @@ public class Corrente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idCorrente;
+    @OneToOne
+    @JoinColumn(name = "id_conta")
     private Conta conta;
-    private BigDecimal limite;
+
+    @Column(columnDefinition = "DECIMAL", precision = 15, scale = 2, nullable = false)
+    private BigDecimal limite = BigDecimal.ZERO;
+
+    @Column(columnDefinition = "DATE", nullable = false)
     private LocalDate dataVencimento;
 
     @Column(columnDefinition = "DECIMAL", precision = 5, scale = 2, nullable = false)

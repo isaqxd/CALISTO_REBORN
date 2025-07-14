@@ -13,7 +13,14 @@ public class Agencia {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idAgencia;
+
+	@Column(length = 50, nullable = false)
 	private String nome;
+
+	@Column(length = 10, nullable = false, unique = true)
 	private String codigoAgencia;
+
+	@OneToOne
+	@JoinColumn(name = "id_endereco")
 	private Endereco endereco;
 }
