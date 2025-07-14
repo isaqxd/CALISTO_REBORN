@@ -15,7 +15,13 @@ public class Transacao {
     private Conta contaOrigem;
     private Conta contaDestino;
     private Tipo tipo;
+
+    @Column(columnDefinition = "DECIMAL", precision = 15, scale = 2, nullable = false)
     private BigDecimal valor;
-    private LocalDateTime dataHora;
+
+    @Column(columnDefinition = "TIMESTAMP", nullable = false)
+    private LocalDateTime dataHora = LocalDateTime.now();
+
+    @Column(length = 100)
     private String descricao;
 }

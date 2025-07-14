@@ -11,5 +11,7 @@ import lombok.Setter;
 public class Cliente {
 	private int idCliente;
 	private Usuario usuario;
-	private BigDecimal scoreCredito;
+
+	@Column(columnDefinition = "DECIMAL", precision = 5, scale = 2)
+	private BigDecimal scoreCredito = BigDecimal.ZERO;
 }

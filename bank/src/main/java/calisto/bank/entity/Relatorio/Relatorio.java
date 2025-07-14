@@ -12,6 +12,10 @@ public class Relatorio {
 	private int idRelatorio;
 	private Funcionario funcionario;
 	private String tipoRelatorio;
-	private LocalDateTime dataGeracao;
+
+	@Column(columnDefinition = "TIMESTAMP", nullable = false)
+	private LocalDateTime dataGeracao = LocalDateTime.now();
+
+	@Column(columnDefinition = "TEXT", nullable = false)
 	private String conteudo;
 }
