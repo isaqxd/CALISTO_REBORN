@@ -9,6 +9,12 @@ import lombok.Setter;
 @Getter
 @Setter
 
+@Table(
+		name = "endereco",
+		indexes = {
+				@Index(name = "cep_idx", columnList = "cep")
+		}
+)
 public class Endereco {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

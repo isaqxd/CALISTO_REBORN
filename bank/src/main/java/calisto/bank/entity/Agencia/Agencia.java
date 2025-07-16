@@ -5,10 +5,9 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity
 @Getter
 @Setter
-
+@Entity
 public class Agencia {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

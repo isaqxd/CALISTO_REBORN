@@ -13,6 +13,12 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 
+@Table(
+        name = "conta",
+        indexes = {
+                @Index(name = "numero_conta_idx", columnList = "numero_conta")
+        }
+)
 public class Conta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
