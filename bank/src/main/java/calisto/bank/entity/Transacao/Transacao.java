@@ -15,7 +15,8 @@ import java.time.LocalDateTime;
 public class Transacao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idTransacao;
+    private Long idTransacao;
+
     @OneToOne
     @JoinColumn(name = "id_conta_origem")
     private Conta contaOrigem;
@@ -25,7 +26,7 @@ public class Transacao {
     private Conta contaDestino;
 
     @Enumerated(EnumType.STRING)
-    private Tipo tipo;
+    private TipoTransacao tipoTransacao;
 
     @Column(columnDefinition = "DECIMAL", precision = 15, scale = 2, nullable = false)
     private BigDecimal valor;

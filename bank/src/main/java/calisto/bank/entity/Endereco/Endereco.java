@@ -12,7 +12,7 @@ import lombok.Setter;
 public class Endereco {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idEndereco;
+	private Long idEndereco;
 
 	@OneToOne
 	@JoinColumn(name = "id_usuario")

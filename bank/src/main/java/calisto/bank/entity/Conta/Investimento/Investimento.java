@@ -14,7 +14,8 @@ import java.math.BigDecimal;
 public class Investimento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idContaInvestimento;
+    private Long idContaInvestimento;
+    
     @OneToOne
     @JoinColumn(name = "id_conta")
     private Conta conta;

@@ -1,6 +1,7 @@
 package calisto.bank.entity.Transacao;
 
-public enum Tipo {
+
+public enum TipoTransacao {
     DEPOSITO,
     SAQUE,
     TRANSFERENCIA;

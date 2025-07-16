@@ -11,7 +11,7 @@ import lombok.Setter;
 public class Funcionario {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idFuncionario;
+	private Long idFuncionario;
 
 	@OneToOne
 	@JoinColumn(name = "id_usuario")

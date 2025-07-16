@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 public class Conta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idConta;
+    private Long idConta;
 
     @Column(length = 20, nullable = false, unique = true)
     private String numeroConta;

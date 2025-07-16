@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 public class Auditoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idAuditoria;
+    private Long idAuditoria;
 
     @OneToOne
     @JoinColumn(name = "id_usuario") // RENOMEIA A TABELA PARA (id_usuario)

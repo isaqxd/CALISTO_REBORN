@@ -12,7 +12,7 @@ import lombok.Setter;
 public class Agencia {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idAgencia;
+	private Long idAgencia;
 
 	@Column(length = 50, nullable = false)
 	private String nome;
