@@ -8,7 +8,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Funcionario {
+public class Funcionario extends Usuario{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idFuncionario;
@@ -21,10 +21,10 @@ public class Funcionario {
 	private String codigoFuncionario;
 
 	@Enumerated(EnumType.STRING)
-	@Column(name = "id_cargo", nullable = false)
+	@Column(name = "cargo", nullable = false)
 	private Cargo cargo;
 
-	@OneToOne
-	@JoinColumn(name = "id_supervisor")
-	private Funcionario idSupervisor;
+	@ManyToOne
+	@JoinColumn(name = "supervisor")
+	private Funcionario Supervisor;
 }

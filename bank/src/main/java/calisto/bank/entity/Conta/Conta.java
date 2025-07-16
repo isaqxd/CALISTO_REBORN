@@ -27,7 +27,7 @@ public class Conta {
     @Column(length = 20, nullable = false, unique = true)
     private String numeroConta;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "id_agencia")
     private Agencia agencia;
 

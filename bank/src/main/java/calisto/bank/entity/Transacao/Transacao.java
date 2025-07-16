@@ -23,11 +23,11 @@ public class Transacao {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idTransacao;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "id_conta_origem")
     private Conta contaOrigem;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "id_conta_destino")
     private Conta contaDestino;
 
