@@ -26,5 +26,5 @@ public class Funcionario {
 
 	@ManyToOne
 	@JoinColumn(name = "supervisor")
-	private Funcionario iSupervisor;
+	private Funcionario Supervisor;
 }
