@@ -15,7 +15,7 @@ public class Relatorio {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idRelatorio;
 
-	@OneToOne
+	@ManyToOne
 	@JoinColumn(name = "id_funcionario")
 	private Funcionario funcionario;
 

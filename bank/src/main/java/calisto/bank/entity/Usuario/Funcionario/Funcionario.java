@@ -13,8 +13,8 @@ public class Funcionario {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idFuncionario;
 
-	@OneToOne
-	@JoinColumn(name = "id_usuario")
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "usuario_id")
 	private Usuario usuario;
 
 	@Column(length = 20, unique = true, nullable = false)

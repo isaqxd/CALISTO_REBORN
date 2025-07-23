@@ -2,7 +2,10 @@ package calisto.bank.entity.Usuario;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
+import calisto.bank.entity.Usuario.Cliente.Cliente;
+import calisto.bank.entity.Usuario.Funcionario.Funcionario;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -39,4 +42,10 @@ public class Usuario {
 
 	@Column(columnDefinition = "DATETIME")
 	private LocalDateTime otpExpiracao;
+
+	@OneToOne(mappedBy = "usuario")
+	private Cliente cliente;
+
+	@OneToOne(mappedBy = "usuario")
+	private Funcionario funcionario;
 }
